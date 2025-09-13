@@ -1,16 +1,27 @@
-# Simple Calculator in Python - Version 1.0
+# Simple Calculator in Python - Version 1.1.0
 # Learning Goals: Variables, Input, Output, Basic Arithmetic
 
 # Greet the user
 print("Simple Calculator")
 print("Welcome! This calculator can perform addition, subtraction, multiplication, division, exponentiation, modulus, and floor division.")
 
-# Get two numbers from the user
-x = float(input("Input the first number: "))
-y = float(input("Input the second number: "))
+# Function to safely get a number from the user
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input! Please enter a valid number.")
+
+# Get the first number from the user
+x = get_number("Enter first number: ")
 
 # Ask the user which operations to perform
 operation = input("Choose operation (+, -, *, /, ^, %, //): ")
+
+# Get the second number from the user
+y = get_number("Enter second number: ")
+
 # Then use conditional statements to perform the chosen operation
 if operation == '+':
     # Perform addition and display the result
@@ -22,11 +33,12 @@ elif operation == '*':
     # Perform multiplication and display the result
     print("Product is: ", x * y)
 elif operation == '/':
-    # Perform division and display the result
+    # Perform division with zero-check and display the result
     if y != 0:
         print("Quotient is: ", x / y)
     else:
         print("Division with zero is not allowed.")
+# Extended arithmetic operations: exponentiation, modulus, floor division
 elif operation == '^':
     # Perform exponentiation and display the result
     print("Exponentiation (x^y) is: ", x ** y)
@@ -37,12 +49,11 @@ elif operation == '%':
     else:
         print("Modulus with zero is not allowed.")
 elif operation == '//':
-    # Perform floor division and display the result
+    # Perform floor division with zero-check and display the result
     if y != 0:
         print("Floor Division (x // y) is: ", x // y)
     else:
         print("Floor division with zero is not allowed.")
 else:
+    # Handle invalid operation input
     print("Invalid operation selected.")
-
-# End of the calculator program
