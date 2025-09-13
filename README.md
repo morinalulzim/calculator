@@ -4,7 +4,7 @@ A beginner-friendly Python project to practice programming fundamentals.
 This calculator is continuously updated as I learn and add more features.  
 Since this is a personal learning project, contributions are welcome, but the main purpose is to showcase my progress in Python.
 
-**Current Version:** `1.1.0`  
+**Current Version:** `1.2.0`  
 
 ---
 
@@ -21,11 +21,11 @@ Since this is a personal learning project, contributions are welcome, but the ma
   - Floor division (//) with zero-check
   - Exponentiation (^)
 - Clear and informative error messages for invalid inputs or operations
+- Allow multiple calculations in a row without restarting
 
 ---
 
 ## Planned Features
-- Allow multiple calculations in a row without restarting
 - Store and reuse the last result (memory function)
 - Support more than two numbers for operations
 - Add advanced mathematical functions: square root, trigonometric functions (sin, cos, tan), logarithm
