@@ -70,5 +70,3 @@ Choose operation (+, -, *, /, %, //, ^): *
 Enter second number: 6
 Result: 24
 ```
-
-> Remember to update this README when new features are added or behavior changes.
